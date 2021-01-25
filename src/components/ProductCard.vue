@@ -46,7 +46,7 @@ export default {
   },
   data() {
     return {
-      selectedProduct: 1,
+      selectedProduct: 0,
       hoverProduct: 0,
       hover: false,
       image: "",

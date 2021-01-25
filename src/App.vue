@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Navigation />
+    <Navigation 
+    v-bind:inCart = "inCart"
+    />
     <ProductCard @inShoppingCart="inShoppingCart" />
   </div>
 </template>
