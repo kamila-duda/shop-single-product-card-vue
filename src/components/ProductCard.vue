@@ -113,8 +113,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .productCard__container {
-  max-width: 1000px;
-  margin: 10px auto;
+  max-width: 900px;
+  margin: 25px auto;
   box-shadow: 0 0 15px 0px #000;
   border-radius: 25px;
   display: flex;
@@ -124,6 +124,11 @@ export default {
 }
 .productCard__item {
   flex-basis: 50%;
+  flex-grow: 1;
+  padding: 30px;
+}
+.productCard__item:nth-child(even) {
+  flex-basis: 30%;
   flex-grow: 1;
   padding: 30px;
 }

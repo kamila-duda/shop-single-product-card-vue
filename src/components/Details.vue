@@ -40,6 +40,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.productCard__detailsTitle {
+    font-size: 20px;
+  }
 @media (max-width: 600px) {
   .productCard__detailsTitle {
     font-size: 18px;
@@ -60,5 +63,6 @@ export default {
 }
 .productCard__detail {
   padding: 5px 0px;
+  font-size: 14px;
 }
 </style>

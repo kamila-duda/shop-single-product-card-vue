@@ -61,7 +61,4 @@ export default {
   width: 20px;
   margin-left: 5px;
 }
-.navbar__menuIcon {
-  background-image: url();
-}
 </style>

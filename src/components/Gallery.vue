@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="productCard__galleryContainer">
     <img class="productCard__galleryItem" :src="image" />
     <div class="productCard__galleryItems">
       <img
@@ -40,12 +40,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.productCard__galleryContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .productCard__galleryItem {
-  width: 100%;
+  width: 80%;
   border-radius: 25px;
 }
 .productCard__galleryItems {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
 }

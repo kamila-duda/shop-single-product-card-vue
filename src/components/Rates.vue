@@ -23,6 +23,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.productCard__rateTitle {
+    font-size: 18px;
+    margin-top: 0;
+  }
 @media (max-width: 600px) {
   .productCard__rateTitle {
     font-size: 16px;
