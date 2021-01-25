@@ -3,23 +3,25 @@
     <Gallery
       class="productCard__item"
       v-bind:products="products"
-      v-bind:selectedProduct="selectedProduct"
+      v-bind:showRing="showRing"
       @updatedSelectedProduct="updatedProduct"
+      @changeProduct="changeProduct"
+      @resetHover="resetHover"
     />
     <Details
       class="productCard__item"
       v-bind:products="products"
-      v-bind:selectedProduct="selectedProduct"
+      v-bind:showRing="showRing"
     />
     <Rates
       class="productCard__item"
       v-bind:products="products"
-      v-bind:selectedProduct="selectedProduct"
+      v-bind:showRing="showRing"
     />
-    <Button
+    <AddToCard
       class="productCard__item"
       v-bind:products="products"
-      v-bind:selectedProduct="selectedProduct"
+      v-bind:showRing="showRing"
     />
     <div>
       <h1></h1>
@@ -32,18 +34,20 @@
 import Gallery from "./Gallery.vue";
 import Details from "./Details.vue";
 import Rates from "./Rates.vue";
-import Button from "./Button.vue";
+import AddToCard from "./AddToCard.vue";
 
 export default {
   components: {
     Gallery,
     Details,
     Rates,
-    Button,
+    AddToCard,
   },
   data() {
     return {
-      selectedProduct: 0,
+      selectedProduct: 1,
+      hoverProduct: 0,
+      hover: false,
       image: "",
       products: [
         {
@@ -81,7 +85,22 @@ export default {
   },
   methods: {
     updatedProduct(index) {
+      this.hoverProduct = index;
+    },
+    changeProduct(index) {
       this.selectedProduct = index;
+    },
+    resetHover(bool) {
+      this.hover = bool;
+    },
+  },
+  computed: {
+    showRing() {
+      if (this.hover) {
+        return this.hoverProduct;
+      } else {
+        return this.selectedProduct;
+      }
     },
   },
 };
@@ -90,25 +109,35 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .productCard__container {
-  max-width: 1200px;
-  margin: 5px;
+  max-width: 1000px;
+  margin: 10px auto;
   box-shadow: 0 0 15px 0px #000;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 }
 .productCard__item {
   flex-basis: 50%;
-  min-width: 280px;
   flex-grow: 1;
-  padding: 15px;
+  padding: 30px;
 }
 @media (max-width: 600px) {
-    .productCard__item:nth-of-type(4){
+  .productCard__item {
+    flex-basis: 280px;
+  }
+  .productCard__item:nth-of-type(1) {
+    order: 1;
+  }
+  .productCard__item:nth-of-type(2) {
     order: 2;
-    width: 100%;
-}}
+  }
+  .productCard__item:nth-of-type(3) {
+    order: 4;
+  }
+  .productCard__item:nth-of-type(4) {
+    order: 3;
+  }
+}
 </style>

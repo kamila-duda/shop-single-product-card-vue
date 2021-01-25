@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <nav class="navbar__container">shop</nav>
+    <Navigation />
     <ProductCard />
   </div>
 </template>
 
 <script>
 import ProductCard from "./components/ProductCard.vue"
+import Navigation from "./components/Navigation.vue"
 
 export default {
   name: 'App',
   components: {
+    Navigation,
     ProductCard,
   }
 }
 </script>
 
 <style>
-.navbar__container{
-  background-color: #9e9d9d;
-}
+
 </style>
