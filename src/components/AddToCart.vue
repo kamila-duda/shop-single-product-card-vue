@@ -1,14 +1,21 @@
 <template>
   <div class="productCard__actionContainer">
     <p>Cena: {{ products[showRing].cena }}</p>
-    <button class="productCard__button">Dodaj do koszyka</button>
+    <button @click="addToCart(products[showRing])" class="productCard__button">
+      Dodaj do koszyka
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Button",
+  name: "AddToCart",
   props: ["products", "showRing"],
+  methods: {
+    addToCart(ring){
+    this.$emit("addToCart", ring)
+  },
+  },
 };
 </script>
 

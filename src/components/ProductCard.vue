@@ -18,10 +18,11 @@
       v-bind:products="products"
       v-bind:showRing="showRing"
     />
-    <AddToCard
+    <AddToCart
       class="productCard__item"
       v-bind:products="products"
       v-bind:showRing="showRing"
+      @addToCart="addToCart"
     />
     <div>
       <h1></h1>
@@ -34,14 +35,14 @@
 import Gallery from "./Gallery.vue";
 import Details from "./Details.vue";
 import Rates from "./Rates.vue";
-import AddToCard from "./AddToCard.vue";
+import AddToCart from "./AddToCart.vue";
 
 export default {
   components: {
     Gallery,
     Details,
     Rates,
-    AddToCard,
+    AddToCart,
   },
   data() {
     return {
@@ -93,6 +94,9 @@ export default {
     resetHover(bool) {
       this.hover = bool;
     },
+    addToCart(ring){
+    this.$emit("inShoppingCart",ring);
+    }
   },
   computed: {
     showRing() {

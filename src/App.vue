@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navigation />
-    <ProductCard />
+    <ProductCard @inShoppingCart="inShoppingCart" />
   </div>
 </template>
 
@@ -14,6 +14,16 @@ export default {
   components: {
     Navigation,
     ProductCard,
+  },
+  data(){
+    return{
+      inCart: [],
+    }
+  },
+  methods:{
+    inShoppingCart(data){
+      this.inCart.push(data);
+    }
   }
 }
 </script>
