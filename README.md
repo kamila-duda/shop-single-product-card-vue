@@ -1,6 +1,6 @@
 # shop-single-product-card-vue
 
-Check on [here](https://kamila-duda.github.io/shop-single-product-card-vue/)
+Check on [https://kamila-duda.github.io/shop-single-product-card-vue/](https://kamila-duda.github.io/shop-single-product-card-vue/)
 
 ## Project screen
 <img src="https://github.com/kamila-duda/kamila-duda/blob/master/vueShop.PNG?raw=true" alt="project screen">
