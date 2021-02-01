@@ -1,4 +1,5 @@
 // vue.config.js
 module.exports = {
-    publicPath: "/shop-single-product-card-vue/"
+    publicPath: process.env.NODE_ENV === 'production'
+    ? "/shop-single-product-card-vue/" : "/"
     }
