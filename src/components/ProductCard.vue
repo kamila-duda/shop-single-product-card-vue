@@ -12,18 +12,14 @@
       class="productCard__item"
       v-bind:products="products"
       v-bind:showRing="showRing"
+      @add-To-Cart="addToCart"
     />
     <Rates
       class="productCard__item"
       v-bind:products="products"
       v-bind:showRing="showRing"
     />
-    <AddToCart
-      class="productCard__item"
-      v-bind:products="products"
-      v-bind:showRing="showRing"
-      @addToCart="addToCart"
-    />
+    
     <div>
       <h1></h1>
       <img :src="image" />
@@ -35,14 +31,12 @@
 import Gallery from "./Gallery.vue";
 import Details from "./Details.vue";
 import Rates from "./Rates.vue";
-import AddToCart from "./AddToCart.vue";
 
 export default {
   components: {
     Gallery,
     Details,
     Rates,
-    AddToCart,
   },
   data() {
     return {
@@ -135,18 +129,6 @@ export default {
 @media (max-width: 600px) {
   .productCard__item {
     flex-basis: 280px;
-  }
-  .productCard__item:nth-of-type(1) {
-    order: 1;
-  }
-  .productCard__item:nth-of-type(2) {
-    order: 2;
-  }
-  .productCard__item:nth-of-type(3) {
-    order: 4;
-  }
-  .productCard__item:nth-of-type(4) {
-    order: 3;
   }
 }
 </style>

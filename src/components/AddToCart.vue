@@ -13,7 +13,7 @@ export default {
   props: ["products", "showRing"],
   methods: {
     addToCart(ring){
-    this.$emit("addToCart", ring)
+    this.$emit("add-To-Cart", ring)
   },
   },
 };
@@ -27,11 +27,11 @@ export default {
   align-items: center;
 }
 .productCard__button {
-  padding: 20px;
-  border-radius: 25px;
-  font-size: 20px;
-  height: 70px;
-  width: max-content;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  height: 50px;
+  width: 155px;
   cursor: pointer;
   outline: none;
 }
