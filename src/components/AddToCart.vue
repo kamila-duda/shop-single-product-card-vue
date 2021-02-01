@@ -1,7 +1,11 @@
 <template>
   <div class="productCard__actionContainer">
     <p>Cena: {{ products[showRing].cena }}</p>
-    <button @click="addToCart(products[showRing])" class="productCard__button" :disabled="(products[showRing].inStock<1)? true : false" >
+    <button
+      @click="addToCart(products[showRing])"
+      class="productCard__button"
+      :disabled="products[showRing].inStock < 1 ? true : false"
+    >
       Dodaj do koszyka
     </button>
   </div>
@@ -12,9 +16,9 @@ export default {
   name: "AddToCart",
   props: ["products", "showRing"],
   methods: {
-    addToCart(ring){
-    this.$emit("add-To-Cart", ring)
-  },
+    addToCart(ring) {
+      this.$emit("add-To-Cart", ring);
+    },
   },
 };
 </script>

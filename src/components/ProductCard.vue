@@ -89,6 +89,10 @@ export default {
       this.hover = bool;
     },
     addToCart(ring){
+    const index = this.products.findIndex(product=> product===ring);
+    if (this.products[index].inStock > 0) {
+    this.products[index].inStock= this.products[index].inStock-1;
+    }
     this.$emit("inShoppingCart",ring);
     }
   },
