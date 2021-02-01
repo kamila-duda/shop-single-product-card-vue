@@ -1,6 +1,6 @@
 <template>
   <div class="productCard__actionContainer">
-    <p>Cena: {{ products[showRing].cena }}</p>
+    <p class="productCard__price">Cena: {{ products[showRing].cena }}</p>
     <button
       @click="addToCart(products[showRing])"
       class="productCard__button"
@@ -29,6 +29,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.productCard__price {
+  font-size: 14px;
+  font-weight: bold;
 }
 .productCard__button {
   padding: 10px;

@@ -53,7 +53,7 @@ export default {
           cena: "899 zł",
           inStock: 3,
           rates: [
-            { text: "super!", user: "Kate" },
+            { text: "Super! Rozmiar w porządku, wykonanie na najwyższym poziomie.", user: "Kate" },
             { text: "Pięknie wygląda na palcu. Polecam.", user: "Anna" },
           ],
         },

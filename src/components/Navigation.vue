@@ -1,14 +1,14 @@
 <template>
   <nav class="navbar__container">
-    <h2 class="navbar__title"><img
-          class="navbar__logo"
-          src="../assets/images/diamond.svg"
-        />Jewelry store</h2>
+    <h2 class="navbar__title">
+      <img class="navbar__logo" src="../assets/images/diamond.svg" />Jewelry
+      store
+    </h2>
     <ul class="navbar__menu">
       <li class="navbar__menuItem">Strona główna</li>
       <li class="navbar__menuItem">Produkty</li>
       <li class="navbar__menuItem navbar__menuItem--shop">
-        Koszyk ({{this.inCart.length}})
+        Koszyk ({{ this.inCart.length }})
         <img
           class="navbar__menuShop"
           src="../assets/images/shopping-cart.svg"
@@ -28,16 +28,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .navbar__container {
-  background-color: #9e9d9d;
+  background: rgb(235, 233, 238);
+  background: linear-gradient(
+    90deg,
+    rgba(235, 233, 238, 1) 0%,
+    rgba(224, 211, 254, 1) 100%
+  );
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
 }
-.navbar__logo{
-    width: 20px; 
-    margin-right: 8px;
+.navbar__logo {
+  width: 20px;
+  margin-right: 8px;
 }
 .navbar__title {
   margin: 0;
