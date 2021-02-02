@@ -19,7 +19,6 @@ export default {
       hoverProduct: 0,
       hover: false,
       image: "",
-      products: products,
     };
   },
   methods: {

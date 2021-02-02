@@ -1,21 +1,20 @@
 <template>
   <div id="app">
-    <routerView />
+     <router-link :to="{name: `ProductCard`}">Home</router-link>
+     <router-link :to="{name: 'ShopCard'}">sjop</router-link>
   </div>
 </template>
 
 <script>
 // import ProductCard from "./components/ProductCard/ProductCard.vue"
 // import Navigation from "./components/Navigation.vue"
-import routerView from "./router"
 
 export default {
   name: 'App',
-   components: {
-     routerView,
+  // components: {
   //   Navigation,
   //   ProductCard,
-  },
+  // },
   data(){
     return{
       inCart: [],
