@@ -1,23 +1,25 @@
-import { createWebHistory, createRouter } from "vue-router";
 import ProductCard from '../components/ProductCard/ProductCard.vue';
 import ShopCard from '../components/ShopCard/ShopCard.vue';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-const routes = [
-  {
-    path: "/",
-    name: "ProductCard",
-    component: ProductCard,
-  },
-  {
-    path: "/shop",
-    name: "ShopCard",
-    component: ShopCard,
-  },
-];
+Vue.use(VueRouter);
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
+const Router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'ShopCard',
+      component: ShopCard
+    },
+    {
+      path: "/",
+      name: "ProductCard",
+      component: ProductCard,
+    },
+  ]
 });
 
-export default router;
+export default Router;
