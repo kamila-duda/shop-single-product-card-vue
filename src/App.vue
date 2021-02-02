@@ -1,21 +1,20 @@
 <template>
   <div id="app">
-    <Navigation 
-    v-bind:inCart = "inCart"
-    />
-    <ProductCard @inShoppingCart="inShoppingCart" />
+    <routerView />
   </div>
 </template>
 
 <script>
-import ProductCard from "./components/ProductCard.vue"
-import Navigation from "./components/Navigation.vue"
+// import ProductCard from "./components/ProductCard/ProductCard.vue"
+// import Navigation from "./components/Navigation.vue"
+import routerView from "./router"
 
 export default {
   name: 'App',
-  components: {
-    Navigation,
-    ProductCard,
+   components: {
+     routerView,
+  //   Navigation,
+  //   ProductCard,
   },
   data(){
     return{
