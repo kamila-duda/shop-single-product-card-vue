@@ -5,11 +5,10 @@
       store
     </h2>
     <ul class="navbar__menu">
-      <router-link :to="{name: `ProductCard`}" class="navbar__menuItem">Home</router-link>
-     <router-link :to="{name: 'ShopCard'}"> Shop</router-link>
+      <li class="navbar__menuItem">Strona główna</li>
       <li class="navbar__menuItem">Produkty</li>
       <li class="navbar__menuItem navbar__menuItem--shop">
-        Koszyk ({{ this.inCart.length }})
+        Koszyk ({{this.inCart.length}})
         <img
           class="navbar__menuShop"
           src="../assets/images/shopping-cart.svg"

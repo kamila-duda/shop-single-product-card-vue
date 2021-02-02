@@ -4,14 +4,12 @@
     v-bind:inCart = "inCart"
     />
     <ProductCard @inShoppingCart="inShoppingCart" />
-    <router-view />
   </div>
 </template>
 
 <script>
 import ProductCard from "./components/ProductCard/ProductCard.vue"
 import Navigation from "./components/Navigation.vue"
-
 export default {
   name: 'App',
   components: {
@@ -32,5 +30,4 @@ export default {
 </script>
 
 <style>
-
 </style>
