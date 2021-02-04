@@ -78,12 +78,12 @@ export default {
 .productCard__container {
   max-width: 900px;
   margin: 25px auto;
-  box-shadow: 0 0 15px 0px #000;
-  border-radius: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  border-left: 2px solid #b9b9b9;
+  border-right: 2px solid #b9b9b9;
 }
 .productCard__item {
   flex-basis: 50%;
